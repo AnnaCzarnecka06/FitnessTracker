@@ -81,9 +81,9 @@ class Lab03EntitiesTest {
     }
 
     @Test
-    void achivementTableHasUserForeighKey() throws Exception {
+    void achievementTableHasUserForeighKey() throws Exception {
         try (Connection conn = dataSource.getConnection()) {
-            Set<String> cols = tableColumns(conn, "user_event");
+            Set<String> cols = tableColumns(conn, "achievement");
             assertThat(cols).contains("id", "user_id");
         }
     }

@@ -6,6 +6,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import pl.wsb.fitnesstracker.event.Event;
 import pl.wsb.fitnesstracker.user.api.User;
 
 import java.time.LocalDate;
@@ -30,16 +31,16 @@ public class UserEvent {
 
     @ManyToOne
     @JoinColumn(name = "event_id", nullable = false)
-    private User user2;
+    private Event event;
 
     @Column(nullable = false)
     private String status;
 
 
-    public UserEvent(User user, User user2, String status) {
+    public UserEvent(User user, Event event, String status) {
 
         this.user = user;
-        this.user2 = user2;
+        this.event = event;
         this.status = status;
 
     }

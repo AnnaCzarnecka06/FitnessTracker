@@ -1,5 +1,6 @@
 package pl.wsb.fitnesstracker.user.api;
 
+
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -8,6 +9,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.util.Objects;
+import java.util.Optional;
 
 @Entity
 @Table(name = "users")
